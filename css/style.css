@@ -1,0 +1,155 @@
+@font-face{
+    font-family: opensansl;
+	src: url('../fonts/OpenSans-Light.ttf');
+}
+
+@font-face{
+    font-family: opensansr;
+	src: url('http://fonts.googleapis.com/css?family=The+Girl+Next+Door');
+}
+
+@font-face{
+    font-family: opensansb;
+	src: url('../fonts/OpenSans-Bold.ttf');
+}
+
+body{
+    font-family:opensansr !important;
+    background: url(../img/bg-body.png) repeat;
+    font-size:13px;
+}
+
+.top-margin{
+    width: auto;
+    height:150px;
+}
+
+#wrapper{
+    border:5px solid #777;
+    min-height:100px;
+    background:#fff;
+    margin-top:150px;
+    margin-bottom: 50px;
+    position: relative;
+    z-index: 2;
+}
+
+.content{
+    margin:30px;
+    width:auto;
+}
+
+.page-header h1{
+    color:#930b0e;
+    font-size:43px;
+    font-weight:normal;
+}
+
+.input-text{
+    padding:8px 5px 8px 5px !important;
+}
+
+.t-right{
+    text-align:right !important;
+}
+
+.marg20-top{
+    margin-top:20px !important;
+    clear:both;
+}
+
+.footer{
+    margin-top:20px;
+}
+
+.bubble{
+    position:fixed;
+	width:100%;
+	height:100%;
+	left:0;
+	top:0;
+	z-index:1;
+}
+
+
+a.sb,
+.sb a {
+	width: 32px;
+	height: 32px;
+	background-repeat: no-repeat;
+	background-position: center center;
+	text-indent: -900em;
+	color: #333;
+	text-decoration: none;
+	line-height: 100%;
+	white-space: nowrap;
+	display: inline-block;
+	position: relative;
+	vertical-align: middle;
+	margin: 0 2px 5px 0;
+	
+	/* default button color */
+	background-color: #ececec;
+	border: solid 1px #b8b8b9;
+	
+	/* default box shadow */
+	-webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.3), 0 1px 0 rgba(0,0,0,.1);
+	-moz-box-shadow: inset 0 1px 0 rgba(255,255,255,.3), 0 1px 0 rgba(0,0,0,.1);
+	box-shadow: inset 0 1px 0 rgba(255,255,255,.3), 0 1px 0 rgba(0,0,0,.1);
+
+	/* default border radius */
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+    
+    transition: background-color 0.5s;
+    -o-transition: background-color 0.5s;
+    -moz-transition: background-color 0.5s;
+    -webkit-transition: background-color 0.5s;
+	
+}
+/* for IE */
+*:first-child+html a.sb,
+*:first-child+html .sb a {
+	text-indent: 0;
+	line-height: 0;
+	font-size: 0;
+	overflow: hidden;
+}
+
+a.sb:hover:after,
+.sb a:hover:after {
+	background-image: none;
+}
+a.sb:hover,
+.sb a:hover,
+a.sb:hover:after,
+.sb a:hover:after {
+	background-color: #930b0e;
+    border-color: #A3161A #710F11 #A3161A;
+}
+
+a.sb.twitter,
+.sb a.twitter {
+	background-image: url(../img/twitter_bird.png);
+}
+
+a.sb.facebook,
+.sb a.facebook {
+	background-image: url(../img/facebook.png);
+}
+
+a.sb.youtube,
+.sb a.youtube {
+	background-image: url(../img/youtube.png);
+}
+
+a.sb.linkedin,
+.sb a.linkedin {
+	background-image: url(../img/linkedin.png);
+}
+
+a.sb.pinterest,
+.sb a.pinterest {
+	background-image: url(../img/pinterest.png);
+}
