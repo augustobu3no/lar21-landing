@@ -9,7 +9,7 @@
 
     <!-- Le styles -->
     <link href="css/bubblesoon.css" rel="stylesheet">
-	
+	<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
@@ -26,10 +26,15 @@
 
   <body>
     <div class="bubble" id="canvasBubbles"></div>
-	{% if email %} <div class="alert alert-success">
-	  <a  class="close" data-dismiss="alert">&times;</a>
-	  <strong>Obrigado!</strong> Entraremos em contato em breve.
-	</div>{% endif%}
+	{% if email %}
+			<div class="alert alert-block" style="z-index: 12;position:relative; margin-top:10px;
+    margin-bottom:0px;
+    position: relative;">
+				<button type="button" class="close" data-dismiss="alert">&times;</button>
+				<strong>Obrigado!</strong> Entraremos em contato em breve.
+			</div>
+	{% endif%}
+	
     <div class="container" id="wrapper">
         <div class="content">
             <div class="row-fluid">
@@ -64,13 +69,13 @@
     <!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="js/jquery-1.7.2.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
     <script src="js/script.js"></script>
     <script src="js/bubblesoon.js"></script>
 	<script>
 		$(document).ready(function() {
-			$(".alert").alert();
+			//$('.alert').alert('');
 		});
 	</script>
   </body>
