@@ -4,10 +4,10 @@
 }
 
 @font-face {
-  font-family: 'Bubbler One';
+  font-family: 'Ruluko';
   font-style: normal;
   font-weight: 400;
-  src: local('Bubbler One'), local('BubblerOne'), url(http://themes.googleusercontent.com/static/fonts/bubblerone/v1/tiAxK_A8SViEcY0M590QMLrIa-7acMAeDBVuclsi6Gc.woff) format('woff');
+  src: local('Ruluko'), url(http://themes.googleusercontent.com/static/fonts/ruluko/v1/ktCr6OaMRtWuActE8_wCCuvvDin1pK8aKteLpeZ5c0A.woff) format('woff');
 }
 
 @font-face{
@@ -16,7 +16,7 @@
 }
 
 body{
-    font-family:opensansb !important;
+    font-family:'Ruluko' !important;
     background: url(../img/bg-body.png) repeat;
     font-size:23px;
 }
@@ -48,7 +48,11 @@ body{
 }
 
 h2{
-	font-size:33px !important;
+	font-size:39px !important;
+}
+
+p{
+	font-size:17px !important;
 }
 
 .input-text{
