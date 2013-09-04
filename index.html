@@ -25,6 +25,10 @@
 
   <body>
     <div class="bubble" id="canvasBubbles"></div>
+	{% if email %} <div class="alert-success">
+	  <button type="button" class="close" data-dismiss="alert">&times;</button>
+	  <strong>Obrigado!</strong> Entraremos em contato em breve.
+	</div>{% endif%}
     <div class="container" id="wrapper">
         <div class="content">
             <div class="row-fluid">
