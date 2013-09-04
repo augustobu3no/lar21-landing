@@ -4,10 +4,10 @@
 }
 
 @font-face {
-  font-family: 'The Girl Next Door';
+  font-family: 'Bubbler One';
   font-style: normal;
   font-weight: 400;
-  src: local('The Girl Next Door'), local('TheGirlNextDoor'), url(http://themes.googleusercontent.com/static/fonts/thegirlnextdoor/v4/cWRA4JVGeEcHGcPl5hmX7rOFxJ5Ig03puUh67ume3us.woff) format('woff');
+  src: local('Bubbler One'), local('BubblerOne'), url(http://themes.googleusercontent.com/static/fonts/bubblerone/v1/tiAxK_A8SViEcY0M590QMLrIa-7acMAeDBVuclsi6Gc.woff) format('woff');
 }
 
 @font-face{
@@ -16,7 +16,7 @@
 }
 
 body{
-    font-family:'The Girl Next Door' !important;
+    font-family:'Bubbler One' !important;
     background: url(../img/bg-body.png) repeat;
     font-size:23px;
 }
@@ -43,8 +43,12 @@ body{
 
 .page-header h1{
     color:#930b0e;
-    font-size:43px;
+    font-size:43px !important;
     font-weight:normal;
+}
+
+h2{
+	font-size:33px !important;
 }
 
 .input-text{
