@@ -3,9 +3,11 @@
 	src: url('../fonts/OpenSans-Light.ttf');
 }
 
-@font-face{
-    font-family: opensansr;
-	src: url('http://fonts.googleapis.com/css?family=The+Girl+Next+Door');
+@font-face {
+  font-family: 'The Girl Next Door';
+  font-style: normal;
+  font-weight: 400;
+  src: local('The Girl Next Door'), local('TheGirlNextDoor'), url(http://themes.googleusercontent.com/static/fonts/thegirlnextdoor/v4/cWRA4JVGeEcHGcPl5hmX7rOFxJ5Ig03puUh67ume3us.woff) format('woff');
 }
 
 @font-face{
@@ -14,9 +16,9 @@
 }
 
 body{
-    font-family:opensansr !important;
+    font-family:'The Girl Next Door' !important;
     background: url(../img/bg-body.png) repeat;
-    font-size:13px;
+    font-size:23px;
 }
 
 .top-margin{
