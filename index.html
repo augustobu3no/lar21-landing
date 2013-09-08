@@ -132,6 +132,8 @@
     <script src="js/script.js"></script>
     <script src="js/bubblesoon.js"></script>
 	<script>
+	
+	var OK = true;
 		$("#Formulario").validate({
 		lang : 'pt_BR',
 			  rules: {
@@ -139,9 +141,15 @@
 				  required: true,
 				  email: true
 				}
-			  },
-			  submitHandler: function() { goog_report_conversion();}
+			  }
+		});		
+	$(function() {
+		$('#Formulario').submit(function() {
+			goog_report_conversion();
+			return true;
 		});
+	});
+		
 	</script>
 	<script>
 		$(document).ready(function() {
