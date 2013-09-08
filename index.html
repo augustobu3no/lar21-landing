@@ -87,15 +87,6 @@
             <div class="row-fluid footer">
                 <div class="span3">&copy; 2013 Lar21. <a href= "mailto:lar21app@gmail.com">Fale conosco</a></div>
 				<div class="span9">
-				<!-- AddThis Follow BEGIN -->
-
-<div class="addthis_toolbox addthis_32x32_style addthis_default_style">
-<a class="addthis_button_facebook_follow" addthis:userid="lar21app"></a>
-<a class="addthis_button_twitter_follow" addthis:userid="lar21app"></a>
-</div>
-<script type="text/javascript">var addthis_config = {ui_language: "pt", ui_header_color : "#000000", ui_header_background  : "#000000" };</script>
-<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-52004d13764c3b95"></script>
-<!-- AddThis Follow END -->
 				</div>
             </div>
         </div>
@@ -107,18 +98,6 @@
 <!-- AddThis Button BEGIN -->
 <!-- AddThis Smart Layers BEGIN -->
 <!-- Go to http://www.addthis.com/get/smart-layers to customize -->
-<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-52004d13764c3b95"></script>
-<script type="text/javascript">
-  addthis.layers({
-    'theme' : 'transparent',
-	
-    'share' : {
-      'position' : 'right',
-      'numPreferredServices' : 3,
-	  'postShareRecommendedMsg' : '',
-    }   
-  });
-</script>
 <!-- AddThis Smart Layers END --><!-- AddThis Button END -->
 <!-- AddThis Smart Layers END -->
 
@@ -132,52 +111,7 @@
     <script src="js/script.js"></script>
     <script src="js/bubblesoon.js"></script>
 	<script>
-	
-	var OK = true;
-		$("#Formulario").validate({
-		lang : 'pt_BR',
-			  rules: {
-				email: {
-				  required: true,
-				  email: true
-				}
-			  }
-		});		
-	$(function() {
-		$('#Formulario').submit(function() {
-			goog_report_conversion();
-			return true;
-		});
-	});
-		
-	</script>
-	<script>
-		$(document).ready(function() {
-			$('#email').tooltip('')
-			
-			
-		});
-	</script>
-	
-	<script type="text/javascript">
-
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-40635142-2']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-
-</script>
-<!-- Google Code for registro Conversion Page
-In your html page, add the snippet and call
-goog_report_conversion when someone clicks on the
-phone number link or button. -->
-<script type="text/javascript">
-  /* <![CDATA[ */
+	/* <![CDATA[ */
   goog_snippet_vars = function() {
     var w = window;
     w.google_conversion_id = 990933264;
@@ -202,9 +136,59 @@ phone number link or button. -->
   }
 }
 /* ]]> */
+
+		$("#Formulario").validate({
+		lang : 'pt_BR',
+		submitHandler: function(form) {
+			var name = $('#email').val();
+			$.post('/', {email: name})
+			.done(function(data) {
+					location.reload();
+					});     
+			},
+			  rules: {
+				email: {
+				  required: true,
+				  email: true
+				}
+			  }
+		});
+		
+	$(function() {
+		$('#Formulario').submit(function() {
+			console.log(goog_report_conversion);
+			goog_report_conversion();
+			return true;
+		});
+	});
+		
+  
 </script>
 <script type="text/javascript"
   src="http://www.googleadservices.com/pagead/conversion_async.js">
+</script>
+
+	
+	
+	
+	<script>
+		$(document).ready(function() {
+			$('#email').tooltip();
+		});
+	</script>
+	
+	<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-40635142-2']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
 </script>
 
   </body>
