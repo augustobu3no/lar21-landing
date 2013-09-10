@@ -110,6 +110,8 @@
     <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
     <script src="js/script.js"></script>
     <script src="js/bubblesoon.js"></script>
+	
+	
 	<script>
 	/* <![CDATA[ */
   goog_snippet_vars = function() {
@@ -143,7 +145,13 @@
 			var name = $('#email').val();
 			$.post('/', {email: name})
 			.done(function(data) {
-					location.reload();
+					goog_report_conversion();
+					var newDoc = document.open("text/html", "replace");
+					newDoc.write(data);
+					newDoc.close();
+
+ 
+					//location.reload();
 					});     
 			},
 			  rules: {
@@ -154,20 +162,11 @@
 			  }
 		});
 		
-	$(function() {
-		$('#Formulario').submit(function() {
-			console.log(goog_report_conversion);
-			goog_report_conversion();
-			return true;
-		});
-	});
-		
   
 </script>
-<script type="text/javascript"
-  src="http://www.googleadservices.com/pagead/conversion_async.js">
-</script>
 
+<script type="text/javascript"  src="http://www.googleadservices.com/pagead/conversion_async.js">
+	</script>
 	
 	
 	
@@ -190,6 +189,6 @@
   })();
 
 </script>
-
+<noscript>
   </body>
 </html>
