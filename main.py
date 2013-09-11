@@ -14,19 +14,25 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-import webapp2
+import sys
 import os
+
+sys.path.append(os.path.join(os.path.dirname(__file__), 'mailchimp-api-python'))
+
+import webapp2
 import urllib
 from google.appengine.ext import ndb
 from webapp2_extras import sessions
 import jinja2
 import webapp2
 import json
+import mailchimp
 
 config = {}
 config['webapp2_extras.sessions'] = {
     'secret_key': 'intestinopolis',
 }
+
 
 JINJA_ENVIRONMENT = jinja2.Environment(
     loader=jinja2.FileSystemLoader(os.path.dirname(__file__)),
@@ -74,6 +80,8 @@ class MainHandler(BaseHandler):
     	inscricao.email = email
     	inscricao.put()
     	self.session['email'] = True
+        chimp = mailchimp.Mailchimp('456c1fce8056e32998beef28653b47d0-us7')
+        chimp.lists.subscribe('d5ab1e71b7', {'email':email}, merge_vars={'mc_language':'pt'})
     	self.redirect('/')
 
 
