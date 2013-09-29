@@ -1,0 +1,208 @@
+@import url(http://fonts.googleapis.com/css?family=Ubuntu&subset=latin,latin-ext);
+
+@font-face {
+  font-family: 'Ruluko';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Ruluko'), url(http://themes.googleusercontent.com/static/fonts/ruluko/v1/ktCr6OaMRtWuActE8_wCCuvvDin1pK8aKteLpeZ5c0A.woff) format('woff');
+}
+
+@font-face{
+    font-family: opensans;
+	src: url('../fonts/OpenSans-Regular.ttf');
+}
+
+body{
+    font-family:'opensans' !important;
+    background: url(../img/bg-body.png) repeat;
+    font-size:23px;
+	color: rgb(100,100,100) !important;
+}
+
+.top-margin{
+    width: auto;
+    height:150px;
+}
+
+.logo{
+
+margin: 10px 0;
+
+}
+#wrapper{
+    border:5px solid #777;
+    min-height:100px;
+    background:#fff;
+    margin-top:100px;
+    margin-bottom: 50px;
+    position: relative;
+    z-index: 12;
+}
+
+.content{
+    margin-bottom:30px;
+	margin-left: 30px;
+	margin-right: 30px;
+	
+    width:auto;
+}
+
+.page-header h1{
+    color:#930b0e;
+    font-size:43px !important;
+	line-height: 60px;
+    font-weight:normal;
+}
+
+h2{
+	font-size:39px !important;
+	font-family:'Ruluko' !important;
+}
+
+input[type=text]
+{
+    border:solid 1px #000000 !important;
+    width: 98% !important;
+    box-shadow: 2px 2px 0 #828181 inset !important;
+	padding:5px 0px 5px 5px !important;
+}
+
+input[type=text]
+{
+    border-radius:5px!important;
+}
+
+p {
+font-family:opensans;
+}
+
+h4 {
+font-size:14px !important;
+line-height: 21px;
+}
+
+.esquerda p{
+	font-size:18px !important;
+	padding: 5px;
+	line-height: 27px;
+}
+
+.direita p{
+	font-size:18px !important;
+	padding: 5px;
+	line-height: 27px;
+}
+
+.input-text{
+    padding:8px 5px 8px 5px !important;
+}
+
+.t-right{
+    text-align:right !important;
+	font-family:opensans;
+	font-size:18px !important;
+	line-height: 27px;
+}
+
+.marg20-top{
+    margin-top:20px !important;
+    clear:both;
+}
+
+.footer{
+    margin-top:20px;
+}
+
+.bubble{
+    position:fixed;
+	width:100%;
+	height:100%;
+	left:0;
+	top:0;
+	z-index:10;
+}
+
+
+a.sb,
+.sb a {
+	width: 32px;
+	height: 32px;
+	background-repeat: no-repeat;
+	background-position: center center;
+	text-indent: -900em;
+	color: #333;
+	text-decoration: none;
+	line-height: 100%;
+	white-space: nowrap;
+	display: inline-block;
+	position: relative;
+	vertical-align: middle;
+	margin: 0 2px 5px 0;
+	
+	/* default button color */
+	background-color: #ececec;
+	border: solid 1px #b8b8b9;
+	
+	/* default box shadow */
+	-webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.3), 0 1px 0 rgba(0,0,0,.1);
+	-moz-box-shadow: inset 0 1px 0 rgba(255,255,255,.3), 0 1px 0 rgba(0,0,0,.1);
+	box-shadow: inset 0 1px 0 rgba(255,255,255,.3), 0 1px 0 rgba(0,0,0,.1);
+
+	/* default border radius */
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+    
+    transition: background-color 0.5s;
+    -o-transition: background-color 0.5s;
+    -moz-transition: background-color 0.5s;
+    -webkit-transition: background-color 0.5s;
+	
+}
+/* for IE */
+*:first-child+html a.sb,
+*:first-child+html .sb a {
+	text-indent: 0;
+	line-height: 0;
+	font-size: 0;
+	overflow: hidden;
+}
+
+a.sb:hover:after,
+.sb a:hover:after {
+	background-image: none;
+}
+a.sb:hover,
+.sb a:hover,
+a.sb:hover:after,
+.sb a:hover:after {
+	background-color: #930b0e;
+    border-color: #A3161A #710F11 #A3161A;
+}
+
+a.sb.twitter,
+.sb a.twitter {
+	background-image: url(../img/twitter_bird.png);
+}
+
+a.sb.facebook,
+.sb a.facebook {
+	background-image: url(../img/facebook.png);
+}
+
+a.sb.youtube,
+.sb a.youtube {
+	background-image: url(../img/youtube.png);
+}
+
+a.sb.linkedin,
+.sb a.linkedin {
+	background-image: url(../img/linkedin.png);
+}
+
+a.sb.pinterest,
+.sb a.pinterest {
+	background-image: url(../img/pinterest.png);
+}
+
+.at4-follow {top: 60px !important;}
