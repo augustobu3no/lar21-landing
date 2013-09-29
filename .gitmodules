@@ -1,0 +1,3 @@
+[submodule "mailchimp-api-python"]
+	path = mailchimp-api-python
+	url = https://bitbucket.org/mailchimp/mailchimp-api-python.git
