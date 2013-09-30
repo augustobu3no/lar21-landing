@@ -46,6 +46,13 @@ class DadosUsuario(ndb.Model):
 	ip = ndb.StringProperty()
 	time = ndb.DateTimeProperty(auto_now_add = True)
 
+class DadosUsuarioPago(ndb.Model):
+    """Models an individual Guestbook entry with content and date."""
+    email = ndb.StringProperty()
+    header = ndb.TextProperty()
+    ip = ndb.StringProperty()
+    time = ndb.DateTimeProperty(auto_now_add = True)
+
 class BaseHandler(webapp2.RequestHandler):
     def dispatch(self):
         # Get a session store for this request.
@@ -74,7 +81,7 @@ class MainHandler(BaseHandler):
     	email = self.request.get('email')
     	header = self.request.headers
     	ip =  self.request.remote_addr
-    	inscricao = DadosUsuario()
+    	inscricao = DadosUsuarioPago()
     	inscricao.ip = ip
     	inscricao.header = str(header)
     	inscricao.email = email
