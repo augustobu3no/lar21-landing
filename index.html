@@ -154,17 +154,8 @@
 		$("#Formulario").validate({
 		lang : 'pt_BR',
 		submitHandler: function(form) {
-			var name = $('#email').val();
-			$.post('/', {email: name})
-			.done(function(data) {
-					goog_report_conversion();
-					var newDoc = document.open("text/html", "replace");
-					newDoc.write(data);
-					newDoc.close();
-
- 
-					//location.reload();
-					});     
+			goog_report_conversion();
+			form.submit();
 			},
 			  rules: {
 				email: {
